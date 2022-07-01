@@ -1,0 +1,9 @@
+{
+  "WebName": "Welcome to Peace",
+  "MainMenu": [
+    {"name": "Home","icoUse": "#house-heart"},
+    {"name": "Seting","icoUse": "#gear"},
+    {"name": "About' Peace","icoUse": "#tags"}
+  ],
+  "login": "LogIN..."
+}

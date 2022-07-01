@@ -1,0 +1,9 @@
+{
+  "WebName": "和平的世界",
+  "MainMenu": [
+    {"name": "首页","icoUse": "#house-heart"},
+    {"name": "设置","icoUse": "#gear"},
+    {"name": "关于","icoUse": "#tags"}
+  ],
+  "login": "登录"
+}
