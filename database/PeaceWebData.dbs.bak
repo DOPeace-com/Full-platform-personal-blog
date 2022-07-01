@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="UserData" id="Project-3e7" database="MySql" >
+	<comment><![CDATA[PeaceWeb's DataBase]]></comment>
+	<schema name="userdata" >
+		<table name="user_main" >
+			<comment><![CDATA[This's main user database for save user base information.]]></comment>
+			<column name="user_id" type="CHAR" length="10" jt="1" mandatory="y" >
+				<comment><![CDATA[This is user num,
+use login]]></comment>
+			</column>
+			<column name="user_name" type="VARCHAR" length="100" jt="12" mandatory="y" >
+				<defo><![CDATA['null']]></defo>
+				<comment><![CDATA[This's save username.]]></comment>
+			</column>
+			<column name="user_password" type="VARCHAR" length="30" jt="12" mandatory="y" >
+				<comment><![CDATA[This is save user password]]></comment>
+			</column>
+			<column name="user_phonenum" type="VARCHAR" length="11" jt="12" >
+				<comment><![CDATA[this is save user phome number]]></comment>
+			</column>
+			<index name="pk_user_main" unique="PRIMARY_KEY" >
+				<column name="user_id" />
+			</index>
+			<options><![CDATA[engine=InnoDB]]></options>
+		</table>
+	</schema>
+	<layout name="Default Layout" id="Layout-1588" show_relation="columns" >
+		<entity schema="userdata" name="user_main" color="C1D8EE" x="192" y="192" />
+		<callout x="48" y="48" pointer="Round" >
+			<comment><![CDATA[Add tables to the layout by drag & drop from the project structure.
+Currently, the model is in offline mode, which means new tables will be created only in the model file.
+Drop this callout from its context menu.]]></comment>
+		</callout>
+	</layout>
+</project>
