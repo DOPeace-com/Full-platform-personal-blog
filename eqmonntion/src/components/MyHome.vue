@@ -1,5 +1,6 @@
 <template>
   <h1>This is MyHome</h1>
+  <img width="120" alt="MaxLogo" src="../assets/logo.png"/>
   <svg class="bi" width="32" height="32" fill="currentColor">
     <use :xlink:href="iconPath+'#heart-fill'"/>
   </svg>

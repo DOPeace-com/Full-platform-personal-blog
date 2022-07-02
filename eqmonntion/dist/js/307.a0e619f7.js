@@ -1,2 +1,0 @@
-"use strict";(self["webpackChunkeqmonntion"]=self["webpackChunkeqmonntion"]||[]).push([[307],{307:function(e,n,t){t.r(n),t.d(n,{default:function(){return m}});var r=t(252);function i(e,n,t,i,o,u){return(0,r.wg)(),(0,r.iD)("h1",null,"This is MyHome")}var o=t(481),u={name:"MyHome",created(){o.Z.emit("getTitle","myHome")}},a=t(744);const c=(0,a.Z)(u,[["render",i]]);var m=c}}]);
-//# sourceMappingURL=307.a0e619f7.js.map

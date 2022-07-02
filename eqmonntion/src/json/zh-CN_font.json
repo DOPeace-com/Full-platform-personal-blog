@@ -1,9 +1,17 @@
 {
   "WebName": "和平的世界",
+  "Hello": "欢迎进入和平的世界:)",
   "MainMenu": [
-    {"name": "首页","icoUse": "#house-heart"},
-    {"name": "设置","icoUse": "#gear"},
-    {"name": "关于","icoUse": "#tags"}
+    {"name": "首页","icoUse": "#house-heart", "url": "/"},
+    {"name": "设置","icoUse": "#gear", "url": "/setting"},
+    {"name": "关于","icoUse": "#tags", "url": "/about"}
   ],
-  "login": "登录"
+  "login": "登录",
+  "loginPage": {
+    "userid": "用户名称",
+    "password": "用户密码",
+    "securitycode": "验证码",
+    "submit": "登录",
+    "reset":"清除"
+  }
 }

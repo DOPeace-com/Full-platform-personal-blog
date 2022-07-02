@@ -2,7 +2,7 @@
   <div id="MyHeader">
     <div class="type-area">
       <div id="login">
-        <img class="logoImg" src="../assets/logo.png" ondragstart @click="sendSmallView(true)">
+        <img class="logoImg" src="../assets/logo.png" ondragstart @click="toLogIN">
       </div>
       <div class="MaxMenu">
         <Main_menu/>
@@ -93,7 +93,18 @@ export default {
     sendSmallView(val){
       bus.emit('setSmallVirw',val)
       this.smallView = !this.smallView
-    }
+    },
+    /*
+    * 跳转到登录页
+    * */
+    toLogIN(){
+      if (this.windowsWidth>768){
+        this.$router.push("/login")
+        this.smallView = false
+        return
+      }
+      this.sendSmallView(true)
+    },
   }
 }
 </script>

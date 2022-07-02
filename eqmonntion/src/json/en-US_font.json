@@ -1,9 +1,17 @@
 {
   "WebName": "Welcome to Peace",
+  "Hello": "Welcome to the world of peace:)",
   "MainMenu": [
-    {"name": "Home","icoUse": "#house-heart"},
-    {"name": "Seting","icoUse": "#gear"},
-    {"name": "About' Peace","icoUse": "#tags"}
+    {"name": "Home","icoUse": "#house-heart", "url": "/"},
+    {"name": "Seting","icoUse": "#gear", "url": "/setting"},
+    {"name": "About' Peace","icoUse": "#tags", "url": "/about"}
   ],
-  "login": "LogIN..."
+  "login": "LogIN...",
+  "loginPage": {
+    "userid": "user id",
+    "password": "password",
+    "securitycode": "security code",
+    "submit": "submit",
+    "reset":"reset"
+  }
 }

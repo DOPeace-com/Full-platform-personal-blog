@@ -1,9 +1,6 @@
 <template>
   <MyHeader/>
   <br>
-  <img width="120" alt="MaxLogo" src="./assets/logo.png"/>
-
-
   <router-view/>
 </template>
 
@@ -34,6 +31,11 @@ export default {
 </script>
 
 <style lang="less">
+@media (min-width: 768px) {
+  button:hover{
+    background-color: @hover-color;
+  }
+}
 @import "less/main";
 *{
   user-drag: none;
@@ -44,6 +46,8 @@ export default {
   margin: 0px;
   transition: all .2s ease-out;
 }
+#app:extend(.type-area){
+}
 body{
   font-size: @OneEm-fontSize;
 }
@@ -53,9 +57,19 @@ body{
   justify-content: center;
   align-items: center;
   align-content: center;
-
 }
-#app:extend(.type-area){
-
+button{
+  width: 100%;
+  border: 0px;
+  padding: 10px 0px;
+  margin: 5px 0px;
+  border-radius: 5px;
+  letter-spacing: 20px;
+  text-indent: 1em;
+}
+@media (max-width: 768px) {
+  button:active{
+    background-color: @active-color;
+  }
 }
 </style>

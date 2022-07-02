@@ -11,7 +11,7 @@
         </svg>
       </div>
       <ul>
-        <li class="but" v-for="(item,key) in fontFile.MainMenu" :key="key">
+        <li class="but" v-for="(item,key) in fontFile.MainMenu" :key="key" @click="toPage(item.url)">
           <svg class="bi-icon-menu" fill="currentColor" v-if="windowsWidth<768" >
             <use :xlink:href="iconPath+ item.icoUse" />
           </svg>
@@ -21,8 +21,6 @@
               <use :xlink:href="iconPath+ '#chevron-right'" />
             </svg>
           </div>
-
-
         </li>
       </ul>
       <div class="SmailMenuDown">
@@ -101,6 +99,13 @@ export default {
     toLogIN(){
       this.$router.push("/login")
       this.smallView = false
+    },
+    /*
+    * 菜单跳转
+    * */
+    toPage(url){
+      this.$router.push(url)
+      this.smallView = false
     }
   }
 }
@@ -111,7 +116,8 @@ export default {
 @media (min-width: 768px) {
   .Main_manu{
     li:hover{
-      font-weight: 600;
+      font-weight: bold;
+      text-shadow: 0px 0px 5px @shadow-blue;
     }
   }
 

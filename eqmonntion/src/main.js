@@ -1,11 +1,15 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 const app = createApp(App);
+
+
 //导入路由
 import router from "@/router";
-
-
 app.use(router)
+//映入滑块验证
+
+
+
 
 /*
 * 配置动画的网页标题
