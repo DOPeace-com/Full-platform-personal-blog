@@ -35,7 +35,6 @@
 
 <script>
 import bus from '@/util/Bus'
-import axios from 'axios'
 //引入自己制作的滑块
 import MySlid from "@/components/mysliding/MySlid";
 export default {
@@ -93,15 +92,16 @@ export default {
     /*
     * 登录请求axios
     * */
-    loginmethods(){
+    async loginmethods(){
+      const _this = this
       if (this.securitycode){
-        axios.get("/api/login?userid="+this.username+"&userpassword="+this.password).then((resp)=>{
-          if (resp.data=="success"){
-            alert("登录成功")
-          }else{
-            alert("用户名密码输入不正确")
+        const {data:res} = await this.$axios.get('/login',{
+          params:{
+            userid : _this.username,
+            userpassword : _this.password
           }
         })
+        console.log(res)
       }else{
         alert("请完成验证")
       }

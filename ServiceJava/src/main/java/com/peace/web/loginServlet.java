@@ -18,6 +18,7 @@ import java.util.Date;
 public class loginServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        resp.addHeader("Access-Control-Allow-Origin","*");
         String userid = req.getParameter("userid");
         String userpassword = req.getParameter("userpassword");
 

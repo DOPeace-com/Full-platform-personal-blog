@@ -2,13 +2,17 @@ import { createApp } from 'vue'
 import App from './App.vue'
 const app = createApp(App);
 
-
-//导入路由
+/*
+* 导入路由组件
+* */
 import router from "@/router";
 app.use(router)
-//映入滑块验证
-
-
+/*
+* 导入axios组件
+* */
+import axios from "axios";
+axios.defaults.baseURL = "http://localhost:8080"
+app.config.globalProperties.$axios = axios
 
 
 /*
